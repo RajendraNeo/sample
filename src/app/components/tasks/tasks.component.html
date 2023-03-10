@@ -1,0 +1,12 @@
+<div class="mt-2 mb-3">
+    <app-add-task *ngIf="!editTask" (addTask)="addTask($event)"></app-add-task>
+    <app-edit-task *ngIf="editTask" [editTask]="editTask" (editSubmit)="onEditSubmit($event)"></app-edit-task>
+</div>
+<app-task-item *ngFor="let task of tasks" 
+    [taskItem]="task" 
+    (deleteTask)="deleteTask($event)"
+    (toggleReminder)="onToggle($event)"
+    (editTask)="onEditTask($event)"
+    >
+</app-task-item>
+

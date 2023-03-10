@@ -1,0 +1,9 @@
+<div class="task" [ngClass]="{reminder:taskItem.reminder}" (dblclick)="onToggle(taskItem)">
+    <h4 class="mb-0">{{taskItem.text}}
+        <span class="d-flex align-items-center">
+            <i class="fas fa-pen me-3 text-primary" (click)="onEdit(taskItem)" style="font-size: 20px;"></i>
+            <i class="fas fa-times text-danger" (click)="onDelete(taskItem)"></i>
+        </span>
+    </h4>
+    <p class="mb-0">{{taskItem.day}}</p>
+</div>
